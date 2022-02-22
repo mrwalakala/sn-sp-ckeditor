@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="INSERT_OR_UPDATE">
+        <class_name/>
+        <order>1</order>
+        <size/>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">6ce5b638873901101f824046cebb35bb</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>alberto.colombo</sys_created_by>
+        <sys_created_on>2022-02-18 16:43:03</sys_created_on>
+        <sys_id>e8e5b638873901101f824046cebb35be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="CKEditor on Service Portal" source="x_684094_ckeditor">84c5f238873901101f824046cebb357a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CKEditor on Service Portal">84c5f238873901101f824046cebb357a</sys_scope>
+        <sys_update_name>sp_column_e8e5b638873901101f824046cebb35be</sys_update_name>
+        <sys_updated_by>alberto.colombo</sys_updated_by>
+        <sys_updated_on>2022-02-18 16:43:03</sys_updated_on>
+    </sp_column>
+</record_update>

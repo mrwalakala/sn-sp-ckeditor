@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="09ff3d105f231000b12e3572f2b4775d" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+	awOpenUrl("https://dev123126.service-now.com/sp?id=kb_article_editor&kb_article_sys_id="+g_form.getUniqueValue());
+}
+// Thanks to community for this tip! https://community.servicenow.com/community?id=community_question&sys_id=22c147b1db20f740200f0b55ca96196c 
+function awOpenUrl(url) {
+	this.open(url,'_blank');
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>true</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>true</form_link>
+        <form_menu_button_v2>true</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>true</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Edit Article with CKEditor</name>
+        <onclick>redirectToEditArticlePage()</onclick>
+        <order>100</order>
+        <script><![CDATA[function redirectToEditArticlePage() {  
+   url = 'https://dev123126.service-now.com/sp?id=kb_article_editor&kb_article_sys_id='+g_form.g_form.getUniqueValue();
+   g_navigation.openPopup(url);
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>alberto.colombo</sys_created_by>
+        <sys_created_on>2022-02-21 14:27:21</sys_created_on>
+        <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+        <sys_domain_path>!!!/!!!/</sys_domain_path>
+        <sys_id>2e13b5f587b905101f824046cebb358f</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Edit Article with CKEditor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CKEditor on Service Portal" source="x_684094_ckeditor">84c5f238873901101f824046cebb357a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CKEditor on Service Portal">84c5f238873901101f824046cebb357a</sys_scope>
+        <sys_update_name>sys_ui_action_2e13b5f587b905101f824046cebb358f</sys_update_name>
+        <sys_updated_by>alberto.colombo</sys_updated_by>
+        <sys_updated_on>2022-02-21 15:45:31</sys_updated_on>
+        <table>kb_knowledge</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
