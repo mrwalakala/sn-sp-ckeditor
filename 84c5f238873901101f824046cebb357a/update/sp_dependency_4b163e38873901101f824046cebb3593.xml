@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_dependency">
+    <sp_dependency action="INSERT_OR_UPDATE">
+        <module/>
+        <name>CKEditor</name>
+        <page_load>false</page_load>
+        <sp_portals/>
+        <sys_class_name>sp_dependency</sys_class_name>
+        <sys_created_by>alberto.colombo</sys_created_by>
+        <sys_created_on>2022-02-18 16:44:46</sys_created_on>
+        <sys_id>4b163e38873901101f824046cebb3593</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CKEditor</sys_name>
+        <sys_package display_value="CKEditor on Service Portal" source="x_684094_ckeditor">84c5f238873901101f824046cebb357a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CKEditor on Service Portal">84c5f238873901101f824046cebb357a</sys_scope>
+        <sys_update_name>sp_dependency_4b163e38873901101f824046cebb3593</sys_update_name>
+        <sys_updated_by>alberto.colombo</sys_updated_by>
+        <sys_updated_on>2022-02-18 16:44:46</sys_updated_on>
+    </sp_dependency>
+</record_update>
