@@ -6,6 +6,7 @@
     var c = this;
 
     if ($scope.data.kbArticleSysID) {
+        // Initial setup of CKEditor
         CKEDITOR.replace('ckeditor');
         CKEDITOR.config.removePlugins = 'save';
         CKEDITOR.config.height = '500px';
@@ -14,34 +15,36 @@
     }
 
 
+    // Save the new article body
     $scope.saveArticleBody = function () {
         c.data.articleBody = CKEDITOR.instances.ckeditor.getData();
         c.data.action = "saveArticleBody";
-        console.log(c.data);
 
         c.server.update().then(function () {
             spUtil.addInfoMessage("Update ok!");
-        })
-    }
+        });
+    };
 
-    $scope.backToAW = function () {
+    // Redirect user to Workspace Knowledge article page
+    $scope.backToWS = function () {
         var url = "/now/cwf/agent/kb_view/kb_knowledge/" + c.data.kbArticleSysID + "/sub/record/kb_knowledge/" + c.data.kbArticleSysID;
         $location.url(url);
-    }
+    };
 
+    // Redirect user to Service Portal Knowledge article page
     $scope.openInServicePortal = function () {
         var url = "/kb?id=kb_article_view&sys_kb_id=" + c.data.kbArticleSysID;
         $location.url(url);
-    }
+    };
 };]]></client_script>
         <controller_as>c</controller_as>
         <css/>
         <data_table>sp_instance</data_table>
         <demo_data/>
-        <description/>
+        <description>Allows you to edit the content of an article knowledge using CKEditor. You need to pass the sys_id of the article as a parameter by calling it kb_article_sys_id</description>
         <docs/>
         <field_list/>
-        <has_preview>true</has_preview>
+        <has_preview>false</has_preview>
         <id>kb_article_editor</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
@@ -70,14 +73,14 @@
         <sys_created_by>alberto.colombo</sys_created_by>
         <sys_created_on>2022-02-18 16:43:02</sys_created_on>
         <sys_id>24e57638873901101f824046cebb3561</sys_id>
-        <sys_mod_count>49</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>KB Article Editor</sys_name>
         <sys_package display_value="CKEditor on Service Portal" source="x_684094_ckeditor">84c5f238873901101f824046cebb357a</sys_package>
         <sys_policy/>
         <sys_scope display_value="CKEditor on Service Portal">84c5f238873901101f824046cebb357a</sys_scope>
         <sys_update_name>sp_widget_24e57638873901101f824046cebb3561</sys_update_name>
         <sys_updated_by>alberto.colombo</sys_updated_by>
-        <sys_updated_on>2022-02-22 17:20:01</sys_updated_on>
+        <sys_updated_on>2022-02-23 11:10:23</sys_updated_on>
         <template><![CDATA[<div>
     <div ng-hide="!data.kbArticleSysID">
         <form>
@@ -87,8 +90,8 @@
             <button ng-click="saveArticleBody() " class="btn btn-primary">
                 Save
             </button>
-            <button ng-click="backToAW() " class="btn btn-default">
-                Back to Agent Workspace
+            <button ng-click="backToWS() " class="btn btn-default">
+                Back to Workspace
             </button>
             <button ng-click="openInServicePortal() " class="btn btn-default">
                 Open in Service Portal

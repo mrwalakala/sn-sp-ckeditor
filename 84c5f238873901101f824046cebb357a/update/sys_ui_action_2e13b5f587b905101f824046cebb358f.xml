@@ -4,14 +4,14 @@
         <active>true</active>
         <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
-	awOpenUrl("https://dev123126.service-now.com/sp?id=kb_article_editor&kb_article_sys_id="+g_form.getUniqueValue());
+	awOpenUrl("/sp?id=kb_article_editor&kb_article_sys_id="+g_form.getUniqueValue());
 }
 // Thanks to community for this tip! https://community.servicenow.com/community?id=community_question&sys_id=22c147b1db20f740200f0b55ca96196c 
 function awOpenUrl(url) {
 	this.open(url,'_blank');
 }]]></client_script_v2>
-        <comments/>
-        <condition/>
+        <comments>Redirects the user to the Service Portal page to edit the article content using CKEditor</comments>
+        <condition>current.canWrite();</condition>
         <form_action>true</form_action>
         <form_button>false</form_button>
         <form_button_v2>true</form_button_v2>
@@ -35,7 +35,7 @@ function awOpenUrl(url) {
         <onclick>redirectToEditArticlePage()</onclick>
         <order>100</order>
         <script><![CDATA[function redirectToEditArticlePage() {  
-   url = 'https://dev123126.service-now.com/sp?id=kb_article_editor&kb_article_sys_id='+g_form.g_form.getUniqueValue();
+   url = '/sp?id=kb_article_editor&kb_article_sys_id='+g_form.getUniqueValue();
    g_navigation.openPopup(url);
 }]]></script>
         <show_insert>true</show_insert>
@@ -48,7 +48,7 @@ function awOpenUrl(url) {
         <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
         <sys_domain_path>!!!/!!!/</sys_domain_path>
         <sys_id>2e13b5f587b905101f824046cebb358f</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Edit Article with CKEditor</sys_name>
         <sys_overrides/>
         <sys_package display_value="CKEditor on Service Portal" source="x_684094_ckeditor">84c5f238873901101f824046cebb357a</sys_package>
@@ -56,7 +56,7 @@ function awOpenUrl(url) {
         <sys_scope display_value="CKEditor on Service Portal">84c5f238873901101f824046cebb357a</sys_scope>
         <sys_update_name>sys_ui_action_2e13b5f587b905101f824046cebb358f</sys_update_name>
         <sys_updated_by>alberto.colombo</sys_updated_by>
-        <sys_updated_on>2022-02-21 15:45:31</sys_updated_on>
+        <sys_updated_on>2022-02-23 10:17:03</sys_updated_on>
         <table>kb_knowledge</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
